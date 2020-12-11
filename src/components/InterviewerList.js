@@ -5,9 +5,15 @@ import InterviewerListItem from "components/InterviewerListItem";
 
 
 
-export default function DayList(props) {
+export default function InterviewerList(props) {
 
+
+  const isInterview = function (interviewer) {
+    if(props.interviewer) {
+      return interviewer.id === props.interviewer.id;
   
+    }   
+  }  
 
   return(
     <section className="interviewers">
@@ -17,9 +23,8 @@ export default function DayList(props) {
           <InterviewerListItem
             {...interviewer}
             key={interviewer.id}
-            // interviewer={interviewer}
-            selected={interviewer.id === props.interviewer}
-            setInterviewer={()=>props.setInterviewer(interviewer.id)} 
+            selected={isInterview(interviewer)}
+            setInterviewer={()=>props.setInterviewer(interviewer)} 
           />
         )}
     </ul>  

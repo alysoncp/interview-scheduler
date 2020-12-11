@@ -4,6 +4,7 @@ import { action } from "@storybook/addon-actions/dist/preview";
 export default function Show(props) {
   
   const int = props.interview;
+  console.log("Show mode props.interview: ", props.interview)
 
   return (
     <main className="appointment__card appointment__card--show">
