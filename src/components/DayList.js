@@ -3,8 +3,9 @@ import { action } from "@storybook/addon-actions/dist/preview";
 import DayListItem from "components/DayListItem";
 
 
-export default function DayList(props) {
 
+export default function DayList(props) {
+  console.log(props.days)
 
   return(
     <ul>
