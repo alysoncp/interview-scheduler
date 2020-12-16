@@ -51,10 +51,10 @@ export default function Appointment(props) {
   }
 
   return(
-    <div>
+    <article data-testid="appointment" className="appointment">
       <Header time={props.time} />
 
-      { mode === SHOW && <Show interview={props.interview} onDelete={() => transition(CONFIRM)} onEdit={() => transition(EDIT)}/> } 
+      { mode === SHOW && props.interview && <Show interview={props.interview} onDelete={() => transition(CONFIRM)} onEdit={() => transition(EDIT)}/> } 
 
       { mode === EMPTY && props.time!== "5pm" && <Empty onAdd={() => transition(CREATE)}/> }
 
@@ -69,7 +69,7 @@ export default function Appointment(props) {
       { mode === ERROR_DELETE && <Error onClose={back} message="Could not delete"/> }
 
 
-      <article className="appointment"></article>
-    </div>
+    </article>
+    
    );
  }
