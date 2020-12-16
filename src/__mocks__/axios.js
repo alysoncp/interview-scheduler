@@ -58,7 +58,7 @@ const fixtures = {
 export default {
   // defaults: { baseURL: "" },
   get: jest.fn(url => {
-    if (url.trim() === "http://localhost:8001/api/days") {
+    if (url.trim() === "/api/days") {
       console.log("In axios if days");
       return Promise.resolve({
         status: 200,
@@ -67,7 +67,7 @@ export default {
       });
     }
 
-    if (url.trim() === "http://localhost:8001/api/appointments") {
+    if (url.trim() === "/api/appointments") {
       console.log("In axios if appointment");
       /* Resolve appointments data */
       return Promise.resolve({
@@ -77,7 +77,7 @@ export default {
       });
     }
 
-    if (url.trim() === "http://localhost:8001/api/interviewers") {
+    if (url.trim() === "/api/interviewers") {
       console.log("In axios if interviewers");  
     /* Resolve interviewers data */
       return Promise.resolve({
