@@ -1,5 +1,12 @@
 # Interview Scheduler
 
+Welcome to Interview Scheduler! See available time slots, book a time to meet with an interviewer, edit your details, or cancel your appointment!
+
+## Screenshots
+
+!["Screenshot of creating a new interview"](https://github.com/alysoncp/interview-scheduler/blob/master/docs/apt_add.png?raw=true)
+!["Screenshot of deleting an interview"](https://github.com/alysoncp/interview-scheduler/blob/master/docs/apt_delete.png?raw=true)
+
 ## Setup
 
 Install dependencies with `npm install`.
