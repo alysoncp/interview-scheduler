@@ -19,21 +19,21 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm test
 
-deploy:
-  machine:
-    enabled: true
+  deploy:
+    machine:
+      enabled: true
 
-  working_directory: ~/client
+    working_directory: ~/client
 
-  steps:
-    - add_ssh_keys:
-        fingerprints:
-          - "b1:e1:47:d2:1c:9a:e7:f2:df:72:44:e2:50:67:0a:07"
-    - checkout
-    - run:
-        name: Push Master to Production
-        command: |
-          git push https://github.com/alysoncp/interview-scheduler.git master:production
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "b1:e1:47:d2:1c:9a:e7:f2:df:72:44:e2:50:67:0a:07"
+      - checkout
+      - run:
+          name: Push Master to Production
+          command: |
+            git push https://github.com/alysoncp/interview-scheduler.git master:production
 
 workflows:
   version: 2
